@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background:rgba(0, 0, 0, 0.9) ;
+    color: #fff;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.showcase{
+    content:'';
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-image: url(showcase.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    transition: all 1s;
+}
+.showcase:hover{
+    filter: blur(0px);
+}
+.content{
+    position: absolute;
+    z-index: 1;
+    top:10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.showcase:hover .content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.content .logo{
+width: 150px ;
+height: 150px;
+}
+
+.content .title{
+font-size: 2.2rem;
+margin-top: 1rem;
+}
+
+.content .text{
+line-height: 1.7;
+margin-top: 1rem;
+}
+
+.container{
+    max-width: 960px; 
+    overflow: hidden;
+    padding: 4rem 1rem;
+    margin: auto;
+}
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    column-gap: 100px;
+}
+.center{
+ text-align: center;
+}
+
+.bg-light{
+background:#f4f4f4 ;
+color: #333;
+}
+.bg-dark{
+background-color: #333;
+color: #f4f4f4;
+}
+footer{
+    padding: 2.2rem ;
+}
+footer p{
+    margin: 0px;
+}
+
+/* Small Screens*/
+@media (max-width:560px) {
+.showcase::after{
+    height: 50vh;
+}
+.content{
+    top:5%;
+    margin-top: 5px;
+}
+.content .logo{
+    height: 90px;
+    width: 90px;
+}
+.content .title{
+    font-size: 1.8rem;
+    margin-top: 0.6rem;
+}
+.content .text{
+    display: none;
+}
+.grid-3,.grid-2{
+    grid-template-columns: 1fr ;
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+}
+.services div{
+    border-bottom:#333  dashed 1px;
+    padding: 1.2rem 1rem;
+}
+.grid-2 .center{
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+.grid-2 .about h3{
+    text-align: center;
+}
+.grid-2 .about p{
+text-align: center;
+padding-left: 40px;
+width: 400px;
+}
+}
